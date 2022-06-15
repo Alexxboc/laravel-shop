@@ -17,20 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
+Route::get('home', 'HomeController@index')->name('home');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+Route::get('about', 'AboutController@index')->name('about');
 
-Route::get('/contacts', function () {
-    return view('contacts');
-})->name('contacts');
+Route::get('contacts', 'ContactController@index')->name('contacts');
 
-Route::get('/products', function () {
-    return view('products');
-})->name('products');
+Route::get('products', 'ProductController@index')->name('products');
 
-//Create home, about, contacts, products routes.
+Route::get('products/{product}', 'ProductController@show')->name('product');
+
+//Create home, about, contacts, products.
