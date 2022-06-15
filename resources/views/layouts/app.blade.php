@@ -8,20 +8,16 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-        
+
         <!-- Styles -->
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
     </head>
     <body>
-        <header>
-            header
-        </header>
+      @include('partials.header')
         <main>
             @yield('content')
         </main>
-        <footer>
-            footer
-        </footer>
+        @include('partials.footer')
         <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
