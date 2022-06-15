@@ -13,18 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('home', 'HomeController@index')->name('home');
+Route::get('/', 'PageController@index')->name('home');
 
-Route::get('about', 'AboutController@index')->name('about');
+Route::get('about', 'PageController@about')->name('about');
 
-Route::get('contacts', 'ContactController@index')->name('contacts');
-
-Route::get('products', 'ProductController@index')->name('products');
-
-Route::get('products/{product}', 'ProductController@show')->name('product');
+Route::get('contacts', 'PageController@contact')->name('contacts');
 
 //Create home, about, contacts, products.
