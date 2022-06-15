@@ -20,4 +20,6 @@ Route::get('about', 'PageController@about')->name('about');
 
 Route::get('contacts', 'PageController@contact')->name('contacts');
 
+Route::get('/products', 'ProductsController@index')->name('products');
+
 //Create home, about, contacts, products.
