@@ -27,4 +27,4 @@ Route::get('products', 'ProductController@index')->name('products');
 
 Route::get('products/{product}', 'ProductController@show')->name('product');
 
-//Create home, about, contacts, products routes.
+//Create home, about, contacts, products.
